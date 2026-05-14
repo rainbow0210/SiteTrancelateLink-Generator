@@ -39,28 +39,27 @@ token=YOUR_BOT_TOKEN
 python bot.py
 ```
 
-4. In Discord, use the slash command `/site_trancelate` and enter the URL you want to translate, the source language, and the target language.
+4. In Discord, use the slash command `/site_trancelate` with this format:
+
+```
+/site_trancelate url:https://example.com input:auto output:en
+```
 
 Notes:
+- `url` must be an `http` or `https` link.
+- `input` is the source language. Use `auto` if you want automatic detection.
+- `output` is the target language.
+- Language codes should follow the Google Cloud language support list.
 - This bot uses slash commands, so no prefix is needed.
-- Language codes should follow the Google Translate language list.
-- If the link is not an HTTP or HTTPS URL, the bot replies with an error embed.
+
+Command details from `/help`:
+- `/help`: Show the command details.
+- `/site_trancelate [url] [input language] [output language]`: Convert a website URL into a Google Translate URL.
+- Language codes: use the ISO-639 codes shown in the Google Cloud language support list. ( https://cloud.google.com/translate/docs/languages )
 
 ## Commands
-- `/site_trancelate <url> <input> <output>`: Generate a Google Translate URL for the given website.
-- `/help`: Show command details and supported language-code information.
-
-Example:
-
-```
-/site_trancelate url:https://example.com input:auto output=en
-```
-
-Response:
-
-```
-https://translate.google.com/translate?sl=auto&tl=en&u=https://example.com
-```
+- `/site_trancelate`: Generate a Google Translate URL for the given website.
+- `/help`: Show the command details and language-code guidance.
 
 ## LICENCE
 MIT LICENCE↓
@@ -124,28 +123,27 @@ token=YOUR_BOT_TOKEN
 python bot.py
 ```
 
-4. Discord内でスラッシュコマンド `/site_trancelate` を実行し、翻訳したいURL、入力言語、出力言語を指定します。
+4. Discord内でスラッシュコマンド `/site_trancelate` を次の形式で実行します。
+
+```
+/site_trancelate url:https://example.com input:auto output:en
+```
 
 補足:
+- `url` には `http` または `https` のURLを指定します。
+- `input` は変換元の言語です。自動判定したい場合は `auto` を使えます。
+- `output` は変換先の言語です。
+- 言語コードはGoogle Cloud 言語サポートの一覧にあるISO-639コードを指定します。
 - このBotはスラッシュコマンド方式のため、プレフィックスは不要です。
-- 言語コードはGoogle翻訳の対応一覧にあるものを指定してください。
-- `http` または `https` で始まらないリンクはエラーになります。
+
+`/help` の内容:
+- `/help`: コマンドの詳細を表示します。
+- `/site_trancelate [url] [input language] [output language]`: サイトURLをGoogle翻訳URLに変換します。
+- 言語コード: Google Cloud 言語サポート一覧にあるISO-639コードを使います。( https://cloud.google.com/translate/docs/languages )
 
 ## コマンド一覧
-- `/site_trancelate <url> <input> <output>`: 指定したサイトのGoogle翻訳URLを生成します。
+- `/site_trancelate`: 指定したサイトのGoogle翻訳URLを生成します。
 - `/help`: コマンドの詳細と対応言語コードの案内を表示します。
-
-例:
-
-```
-/site_trancelate url:https://example.com input:auto output=en
-```
-
-返却例:
-
-```
-https://translate.google.com/translate?sl=auto&tl=en&u=https://example.com
-```
 
 ## ライセンス
 MIT LICENCE↓
